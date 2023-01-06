@@ -43,13 +43,9 @@ function game(playerSelection, computerSelection) {
        computerSelection = getComputerChoice();
     }
 
-    if (playerWins > computerWins) {
-        alert("You won the game!")
-    } else if (computerWins > playerWins) {
-        alert("You lost the game");
-    } else {
-        alert("It's a tie game");
-    }
+    return playerWins > computerWins ? alert("You won the game!")
+         : computerWins > playerWins ? alert("You lost the game")
+         : alert("It's a tie game")
 }
 
 // Compare the user's and computer's selections
@@ -57,37 +53,18 @@ function playRound(playerSelection, computerSelection) {
     let playerChoice = playerSelection.toLowerCase();
     let wonRound;
 
-    // If the user's choice is the same as computer's choice output "It's a tie!"
     if (playerChoice === computerSelection) {
         alert("This round is a tie");
 
-    // If user's choice is rock and computer's choice is scissors output "You win!"
-    } else if (playerChoice === "rock" && computerSelection === "scissors") {
+    } else if (playerChoice === "rock" && computerSelection === "scissors" 
+        || playerChoice === "paper" && computerSelection === "rock" 
+        || playerChoice === "scissors" && computerSelection === "paper") {
         alert("You win this round!");
         winner = "player";
 
-    // If user's choice is rock and computer's choice is paper output "You lose"
-    } else if (playerChoice === "rock" && computerSelection === "paper") {
-        alert("You lose this round");
-        winner = "computer";
-
-    // If user's choice is paper and computer's choice is rock output "You win!"
-    } else if (playerChoice === "paper" && computerSelection === "rock") {
-        alert("You win this round!");
-        winner = "player";
-
-    // If user's choice is paper and computer's choice is scissors output "You lose"
-    } else if (playerChoice === "paper" && computerSelection === "scissors") {
-        alert("You lose this round");
-        winner = "computer";
-
-    // If user's choice is scissors and computer's choice is paper output "You win!"    
-    } else if (playerChoice === "scissors" && computerSelection === "paper") {
-        alert("You win this round!");
-        winner = "player";
-
-    // If user's choice is scissors and computer's choice is rock output "You lose"
-    } else if (playerChoice === "scissors" && computerSelection === "rock") {
+    } else if (playerChoice === "rock" && computerSelection === "paper"
+        || playerChoice === "paper" && computerSelection === "scissors"
+        || playerChoice === "scissors" && computerSelection === "rock") {
         alert("You lose this round");
         winner = "computer";
 
