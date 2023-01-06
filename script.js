@@ -83,7 +83,7 @@ function playRound(playerSelection, computerSelection) {
 
     // If user's choice is scissors and computer's choice is paper output "You win!"    
     } else if (playerChoice === "scissors" && computerSelection === "paper") {
-        alert("You You win this round!");
+        alert("You win this round!");
         winner = "player";
 
     // If user's choice is scissors and computer's choice is rock output "You lose"
