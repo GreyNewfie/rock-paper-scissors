@@ -7,7 +7,7 @@ const computerSelection = getComputerChoice();
 console.log(computerSelection);
 
 //Starts a game of 5 rounds
-game(playerSelection, computerSelection);
+playGame(playerSelection, computerSelection);
 
 // Generates a random number from 1 to 3 and assigns rock, paper or scissors based on the number
 function getComputerChoice() {
@@ -26,7 +26,7 @@ function getComputerChoice() {
 }
 
 // Play a game of 5 rounds, and anounce the winner of the game after 5 rounds.
-function game(playerSelection, computerSelection) {  
+function playGame(playerSelection, computerSelection) {  
     
     let playerWins = 0;
     let computerWins = 0;
