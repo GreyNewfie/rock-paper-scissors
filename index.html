@@ -4,23 +4,59 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Rock, Paper, Scissors</title>
     <script src="script.js"></script>
   </head>
   <body>
-    <h1>Rock, Paper, Scissors</h1>
-    <div class="gameOptions">
-      <button class="rock">Rock</button>
-      <button class="paper">Paper</button>
-      <button class="scissors">Scissors</button>
+    <div id="header">
+      <h1>Rock, Paper, Scissors</h1>
     </div>
-    <div id="result">Make your choice!</div>
-    <div class="scoreboard">
-      <h3>Score</h3>
-      <div class="scores">
-        <p id="playerScore">Player 0</p>
-        <p id="computerScore">Computer 0</p>
+    <div class="container">
+      <div id="gameOptions">
+        <div>
+          <button class="btn">
+            <img
+              name="rock"
+              src="images/rock-hand-blue.png"
+              alt="emoji hand making a rock sign"
+            />
+          </button>
+        </div>
+        <div>
+          <button class="btn">
+            <img
+              name="paper"
+              src="images/paper-hand-blue.png"
+              alt="emoji hand making a paper sign"
+            />
+          </button>
+        </div>
+        <button class="btn">
+          <img
+            name="scissors"
+            src="images/scissors-hand-blue.png"
+            alt="emoji hand making a paper sign"
+          />
+        </button>
+      </div>
+      <div id="result">Make your choice!</div>
+      <div id="scoreboard">
+        <h1>Score</h1>
+        <div id="scores">
+          <div id="score">
+            <h2>Player</h2>
+            <p id="playerScore">0</p>
+          </div>
+          <div id="score">
+            <h2>Computer</h2>
+            <p id="computerScore">0</p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
+  <footer>
+    <p>Copyright @ GreyNewfie 2023</p>
+  </footer>
 </html>
