@@ -1,22 +1,9 @@
 let playerWins = 0;
 let computerWins = 0;
 
-// const buttons = document.querySelectorAll(".btn");
-// console.log(document.querySelector(".btn"));
-
-// buttons.forEach((button) => button.addEventListener("click", startGame));
-
-// function startGame(e) {
-//     let playerSelection = e.target.name;
-//     let computerSelection = getComputerChoice();
-//     playRound(playerSelection, computerSelection);
-// }
-
 document.addEventListener("click", (e) => {
-    console.log(e.target.name);
     let playerSelection = e.target.name;
     let computerSelection = getComputerChoice();
-    // console.log(computerSelection);
     playRound(playerSelection, computerSelection);
 });
 
